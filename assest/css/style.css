@@ -311,6 +311,9 @@ header nav .main .fasl2{
     white-space: nowrap;
 }
 .swiper-slide:hover{
+    transform: scale(1.1);
+}
+.swiper-slide:hover{
     background-color: #fff;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -381,12 +384,14 @@ header nav .main .fasl2{
     .dropmenu-content{
         align-items: flex-start;
     }
-    .dropmenu-content ul.list li{
-        font-size: 11px;
-    }
     .dropmenu-content .best-section{
         display: none;
     }
+}
+@media (max-width:600px){
+.dropmenu-content ul.list li{
+    font-size: 11px;
+}
 }
 /* End dropmenu content */
 /* End content */
@@ -418,15 +423,26 @@ header nav .main .fasl2{
     display: flex;
     width: 30%;
 }
+@media (max-width:1000px){
+    .hero .veiwer span:first-child{
+        width: 100%;
+    }
+    .hero .veiwer span:nth-child(2){
+        display: none;
+    }
+}
 /* End hero  */
 
 /* Start content section  */
-section.content-img .contain{
+section.content-img {
     display: flex;
 }
-section.content-img img{
-    max-width: 7.4%;
-    padding:20px 0;
+section.content-img a{
+    max-width: 7.5%;
+    margin:20px 5px;
+}
+section.content-img img:hover{
+    transform: scale(1.1);
 }
 /* End content section  */
 
@@ -439,6 +455,10 @@ section.discount{
 }
 section.discount a{
     padding:0px 10px ;
+    transition: .4s;
+}
+section.discount a:hover{
+    transform: translateY(-10px);
 }
 /* End Discount section  */
 
@@ -456,6 +476,20 @@ section.discount a{
 .today-discount .for-what a{
     margin: 0 5px;
 }
+.today-discount .for-what a:hover{
+    animation-name: up-down;
+    animation-timing-function:linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    0% {transform: translateY(0);}
+    33% {transform: translateY(5px);}
+    66% {transform: translateY(0);}
+    85% {transform: translateY(-5px);}
+    100% {transform: translateY(0);}
+  }
 /* End 24 hours discount section */
 
 /* Start baby discount section  */
@@ -468,6 +502,10 @@ section.baby-discount .content{
 }
 section.baby-discount .content a{
     margin: 0 5px;
+    transition: .5s
+}
+section.baby-discount .content a:hover{
+    transform: translateY(-5px);
 }
 /* End baby discount section  */
 

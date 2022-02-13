@@ -10,22 +10,31 @@ const swiper = new Swiper('.swiper', {
     },
     breakpoints: {
       '0': {
-        slidesPerView: 2
-      },
-      '480': {
         slidesPerView: 3
       },
-      '640': {
+      '480': {
         slidesPerView: 4
       },
-      '900': {
+      '640': {
         slidesPerView: 5
       },
-      '1000': {
+      '800': {
         slidesPerView: 6
       },
-      '1300': {
+      '1000': {
+        slidesPerView: 7
+      },
+      '1100': {
         slidesPerView: 8
+      },
+      '1300': {
+        slidesPerView: 9
+      },
+      '1400': {
+        slidesPerView: 11
+      },
+      '1500': {
+        slidesPerView: 12
       },
     },
   });
