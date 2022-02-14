@@ -36,6 +36,11 @@ img {
     align-items: center;
     margin: 0 auto;
 }
+@media (max-width:1000px){
+    .contain{
+        width:95%;
+    }
+}
 /* End Global Rules */
 
 /*Start Owl carousel 2*/
@@ -435,14 +440,25 @@ header nav .main .fasl2{
 
 /* Start content section  */
 section.content-img {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(13,1fr)
 }
 section.content-img a{
-    max-width: 7.5%;
     margin:20px 5px;
 }
 section.content-img img:hover{
     transform: scale(1.1);
+}
+@media (max-width:1000px){
+    section.content-img {
+        grid-template-columns: repeat(9,1fr)
+    }
+    section.content-img a:nth-child(10),
+    section.content-img a:nth-child(11),
+    section.content-img a:nth-child(12),
+    section.content-img a:nth-child(13){
+        display: none;
+    }
 }
 /* End content section  */
 
@@ -459,6 +475,14 @@ section.discount a{
 }
 section.discount a:hover{
     transform: translateY(-10px);
+}
+@media (max-width:1000px){
+    section.discount{
+        padding: 5px 0 ;
+    }
+     section.discount a{
+        padding: 0 2px;
+    }
 }
 /* End Discount section  */
 
@@ -482,7 +506,6 @@ section.discount a:hover{
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-
 @keyframes up-down {
     0% {transform: translateY(0);}
     33% {transform: translateY(5px);}
